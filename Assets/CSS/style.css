@@ -10,9 +10,12 @@
 :root {
     --primary-color: #2f89fc;
     --secondary-color: #bfc3c5;
-    --tertiary--color: #52595f;
-    --h2-font-size: 35px
-
+    --tertiary-color: #52595f;
+    --quadratic-color: #e9ecef;
+    --fifth-color: rgba(255, 255, 255, 0.7);
+    --sixth-color: #737373;
+    --seventh-color: #f7f7f7;
+    --h2-font-size: 35px;
 }
 
 ::selection {
@@ -91,7 +94,8 @@ header ul.main-nav > li > a {
 
 header nav > ul.main-nav > li:first-child > a {
     color: var(--primary-color);
-    /* text-shadow: 0px 0px 5px var(--tertiary--color); */
+    text-shadow: 0px 0px 1px var(--tertiary-color);
+
 }
 
 header ul.main-nav > li.drop-down > a {
@@ -101,29 +105,11 @@ header ul.main-nav > li.drop-down > a {
 header ul.main-nav > li > a:hover,
 header ul.main-nav > li > a:hover + label > i {
     color: var(--primary-color);
-    /* text-shadow: 0px 0px 5px var(--tertiary--color); */
 }
 
-
-/* header li.drop-down > a::after {
-    content: '\e5cf';
-    font-family: 'Material Symbols Outlined';
-    font-size: 18px;
-    position: absolute;
-    top: 15px;
-    right: -3px;
-} */
-
-
-/* header li.drop-down > label::after {
-    display: inline;
-    content: '\e5cf';
-    font-family: 'Material Symbols Outlined';
-    font-size: 15px;
-    position: absolute;
-    top: 0;
-    right: -2px;
-} */
+header ul.main-nav > li:nth-child(7) > a:hover {
+    color: white;
+}
 
 header li.drop-down {
     position: relative;
@@ -141,9 +127,6 @@ header li.drop-down:hover i {
     transform: rotate(180deg);
 }
 
-
-
-
 header ul.drop-down-content {
     background-color: white;
     color: black;
@@ -160,18 +143,6 @@ header ul.drop-down-content {
 header ul.drop-down-content-responsive {
     display: none;
 }
-
-
-
-/* header li.drop-down:hover > .drop-down-content {
-    display: block;
-} */
-
-/* header li.drop-down > a:hover ~ ul.drop-down-content {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(0, 0);
-} */
 
 header li.drop-down:hover > ul.drop-down-content {
     visibility: visible;
@@ -256,12 +227,12 @@ header .search select:focus {
 
 header .search input[placeholder="Location"],
 header .search select {
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
     flex-grow: 1;
 }
 
 header .search input[placeholder="What are you looking for?"] {
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
     word-spacing: 2px;
     flex-grow: 2;
 }
@@ -297,7 +268,7 @@ form span::after {
 /*************Trending Search Section***********/
 header .trends {
     gap: 10px;
-    padding: 20px 15px 150px 0;
+    padding: 20px 15px 165px 0;
 }
 
 header .trends h3 {
@@ -339,7 +310,7 @@ main .ad-list {
 }
 
 main .ad-list-child {
-    width: 25%;
+    flex-grow: 1;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 8px 0 var(--secondary-color);
@@ -358,7 +329,7 @@ main .ad-detail div:first-child {
 
 main .ad-detail div:first-child > div {
     padding: 8px 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--quadratic-color);
     border-radius: 20px;
     font-size: 12px;
     font-weight: 700;
@@ -367,7 +338,7 @@ main .ad-detail div:first-child > div {
 main .ad-detail div:first-child > i {
     padding: 6px;
     color: var(--primary-color);
-    background-color: var(--secondary-color);
+    background-color: var(--seventh-color);
     font-size: 20px;
     border-radius: 50%;
     transition: 0.5s;
@@ -399,7 +370,7 @@ main .ad-detail .review i {
 }
 
 main .ad-detail .review i:nth-child(5) {
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
 }
 
 main .ad-detail .review span {
@@ -411,7 +382,7 @@ main .ads .left-right-icons {
     margin-top: 50px;
     margin-bottom: 80px;
     font-size: 40px;
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
     gap: 20px;
 }
 
@@ -448,7 +419,7 @@ main .popular-categories-content h2 {
 main .popular-categories-content p {
     text-align: center;
     padding: 7px 15px;
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
     font-size: 15px;
     margin: 10px 0;
 }
@@ -462,6 +433,7 @@ main .popular-categories-content span {
 
 main .categories-list-child {
     width: 20%;
+    flex-grow: 1;
     padding: 10px 0;
     background-color: transparent;
     flex-direction: column;
@@ -477,11 +449,11 @@ main .categories-list-child > i {
 
 main .category-title,
 main .category-number {
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
 }
 
 main .category-number {
-    background-color: var(--secondary-color);
+    background-color: var(--quadratic-color);
     border-radius: 20px;
 }
 
@@ -582,7 +554,7 @@ main .trending-detail .wrapper div:first-child > div {
 main .trending-detail .wrapper div:first-child > i {
     padding: 6px;
     color: var(--primary-color);
-    background-color: var(--secondary-color);
+    background-color: var(--seventh-color);
     font-size: 20px;
     border-radius: 50%;
     transition: 0.5s;
@@ -613,7 +585,7 @@ main .trending-detail .review i {
 }
 
 main .trending-detail .review i:nth-child(5) {
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
 }
 
 main .trending-detail .review span {
@@ -655,16 +627,16 @@ main .testimonials .container {
 
 main .testimonials .container p:nth-child(4) {
     padding: 30px;
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
     font-size: 18px;
 }
 
 main .testimonials-content .container > p:nth-child(6) {
-    color: var(--tertiary--color);
-    font-size: 27px;
+    color: var(--tertiary-color);
+    font-size: 24px;
     font-style: italic;
     text-align: center;
-    line-height: 2em;
+    line-height: 1.5em;
     position: relative;
     width: 70%;
     margin-bottom: 50px;
@@ -736,7 +708,7 @@ main .blog .container > h2 {
 main .blog .container > p {
     text-align: center;
     padding: 7px 15px;
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
     font-size: 15px;
     margin: 10px 0;
 }
@@ -776,13 +748,13 @@ main .news-info {
 
 main .news-info > .author,
 main .news-info > .date {
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
     font-size: 14px;
 }
 
 main .news-info > span {
     padding: 2px;
-    background-color: var(--tertiary--color);
+    background-color: var(--tertiary-color);
     border-radius: 50%;
 }
 
@@ -793,7 +765,7 @@ main .news-info > a {
 
 main .blog-list-child > p {
     font-size: 17px;
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
     line-height: 1.5em;
 }
 
@@ -829,13 +801,13 @@ main .newsletter-info > h3 {
 }
 
 main .newsletter-info > p {
-    color: var(--secondary-color);
+    color: var(--fifth-color);
 }
 
 main .newsletter-input input {
     display: inline-block;
     width: 450px;
-    padding: 10px;
+    padding: 0 10px;
     background: none;
     border: none;
     color: white;
@@ -859,7 +831,7 @@ main .newsletter-input button {
     padding: 10px;
     border: none;
     background-color: white;
-    color: var(--tertiary--color);
+    color: var(--tertiary-color);
     font-size: 15px;
     height: 50px;
     width: 100px;
@@ -898,7 +870,7 @@ footer .about > h3 {
 }
 
 footer .about > p {
-    color: var(--secondary-color);
+    color: var(--sixth-color);
     font-size: 15px;
     line-height: 2em;
     word-spacing: 0.25em;
@@ -914,7 +886,7 @@ footer .navigation > h3 {
 }
 
 footer .navigation > ul {
-    color: var(--secondary-color);
+    color: var(--sixth-color);
 }
 
 footer .navigation > ul > li {
@@ -936,7 +908,7 @@ footer .social-media  > h3 {
 }
 
 footer .social-media > a {
-    color: var(--secondary-color);
+    color: var(--sixth-color);
     font-size: 20px;
     padding-right: 20px;
     cursor: pointer;
@@ -948,12 +920,12 @@ footer .social-media > a:hover {
 }
 
 footer form > input {
-    height: 50px;
+    height: 40px;
     padding: 15px;
     background-color: transparent;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--sixth-color);
     border-right: transparent;
-    color: var(--secondary-color);
+    color: white;
     font-size: 18px;
     font-family: 'Nanum Gothic', sans-serif;
 }
@@ -963,7 +935,7 @@ footer form > input:focus {
 }
 
 footer form > button {
-    height: 50px;
+    height: 40px;
     padding: 0 20px;
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
@@ -981,13 +953,14 @@ footer form > button:hover {
 
 footer .footer-down {
     margin: 0 auto;
-    border-top: 1px solid var(--secondary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 footer .footer-down > p {
     text-align: center;
+    line-height: 1.7;
     padding: 50px 0 120px 0;
-    color: var(--secondary-color);
+    color: var(--sixth-color);
 }
 
 footer .footer-down > p i {
@@ -1003,20 +976,22 @@ footer .footer-down > p a:hover {
 }
 /***********End of Footer Section***********/
 
-/*****************Responsive****************/
 
-/* Desktop */
+/*************Responsive Design*************/
 
-@media (max-width: 1199px) {
+/* Desktops and large screens*/
+@media (max-width: 1200px) {
+    /********************CSS Reset********************/
     .container {
-        max-width: 80%;
+        max-width: 90%;
     }
 
     body {
         overflow-x: hidden;
     }
 
-    
+    /*****************Header Section*****************/
+    /*****************Nav Bar Section***************/
     header nav input.burger:checked + ul {
         /* display: flex !important; */
         transform: translate(-100%, 0);
@@ -1053,7 +1028,7 @@ footer .footer-down > p a:hover {
         background-color: white;
         z-index: 1;
         height: 665px;
-        width: 300px;
+        width: 252px;
     }
 
     header nav ul.main-nav > li {
@@ -1065,7 +1040,7 @@ footer .footer-down > p a:hover {
     header nav ul.main-nav > li > a {
         display: block;
         width: 100%;
-        color: var(--tertiary--color);
+        color: var(--tertiary-color);
         padding: 18px 20px;
         width: 90%;
         margin: 0;
@@ -1108,16 +1083,14 @@ footer .footer-down > p a:hover {
 
     header li.drop-down > label > i.bx-chevron-down {
         display: inline;
-        /* content: '\e5cf';
-        font-family: 'Material Symbols Outlined'; */
         font-size: 15px;
-        color: var(--tertiary--color);
+        color: var(--tertiary-color);
     }
 
     header li.drop-down > label > i.bx-chevron-down {
         font-size: 18px;
         position: absolute;
-        right: 50px;
+        right: 20px;
         top: 20px;
         cursor: pointer;
         scale: 1;
@@ -1137,7 +1110,7 @@ footer .footer-down > p a:hover {
     }
 
     header ul.main-nav > li > a:hover + label > i {
-        color: var(--tertiary--color);
+        color: var(--tertiary-color);
     }
 
     li.drop-down {
@@ -1179,17 +1152,15 @@ footer .footer-down > p a:hover {
         visibility: visible;
         opacity: 1;
         position: static;
-        left: 0%;
         display: none;
         transform: translateY(100px);
-        z-index: 5;
         padding: 0 30px;
     }
     
     header ul.drop-down-content-responsive > li,
     header ul.drop-down-content-responsive > li > a     {
         padding: 10px;
-        color: var(--tertiary--color);
+        color: var(--tertiary-color);
         transition: 0.5s;
     }
 
@@ -1214,17 +1185,287 @@ footer .footer-down > p a:hover {
         /* opacity: 1; */
         transform: translate(-100%, 100%);
     }
+    /*************End of Nav Bar Section************/
+
+    /******************Slogan Section***************/
+    header .slogan > h1 {
+        margin-top: -20px;
+    }
+    /*************End of Slogan Section*************/
+
+    /*****************Search Section****************/
+    header .search > form {
+        flex-direction: column;
+    }
+
+    header .search input[placeholder="Location"] {
+        width: 100%;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      form span::before {
+        content: '\e5cf';
+        font-family: 'Material Symbols Outlined';
+        font-size: 20px;
+        font-weight: 1000;
+        position: absolute;
+        top: 66px;
+        right: 10px;
+        color: black;
+    }
+    /**************End of Search Section************/
+
+    /*************Trending Search Section***********/
+    header .trends {
+        padding: 20px 15px 70px 0;
+    }
+    /*********End of Trending Search Section********/
+    /*************End of Header Section*************/
     
+    /******************Main Section*****************/
+    /**************Featured Ads Section*************/
+    main .ad-list > div:nth-child(4) {
+        display: none;
+    }
+    /***********End of Featured Ads Section*********/
+    
+    /***********Popular Categories Section**********/
+    main .categories-list-child:not(:nth-child(4)) > .category-title {
+        padding-bottom: 24px;
+    }
 
+    main .popular-categories-background {
+        padding-bottom: 10px;
+    }
+    /*******End of Popular Categories Section********/
 
+    /************Testimonials Section***********/
 
+    main .testimonials-content .container > p:nth-child(6) {
+        width: 88%;
+    }
+    main .testimonials-content .bx-chevron-left,
+    main .testimonials-content .bx-chevron-right {
+        top: 63%;
+    }
+    /********End of Testimonials Section********/
 
+    /*************Newsletter Section************/
+    main .newsletter-input input {
+        width: 350px;
+    }
+    /*********End of Newsletter Section*********/
+
+    /***************Footer Section**************/
+    footer form > input {
+        width: 165px;
+    }
+
+    footer .social-media {
+        width: 16%;
+    }
+
+    footer .social-media i {
+        padding-bottom: 30px;
+    }
+    /***********End of Footer Section***********/
+}
+
+/* Laptops and Small screens*/
+@media (max-width: 1024px) {
+    /******************Main Section*****************/
+    /**************Featured Ads Section*************/
+    main .ad-list > div:nth-child(3) {
+        display: none;
+    }
+    /***********End of Featured Ads Section*********/
+    
+    /***********Popular Categories Section**********/
+    main .popular-categories-background {
+        padding-bottom: 10px;
+    }
+
+    main .categories-list {
+        flex-wrap: wrap;
+    }
+
+    main .categories-list-child {
+        width: 30%;
+        flex-grow: 1;
+    }
+
+    /*******End of Popular Categories Section********/
+
+    /***********Trending Today Section**********/
+    main .trending-list {
+        flex-direction: column;
+    }
+    /*******End of Trending Today Section*******/
+
+    /************Testimonials Section***********/
+    main .testimonials-content .container > p:nth-child(6) {
+        width: 100%;
+    }
+    main .testimonials-content .bx-chevron-left,
+    main .testimonials-content .bx-chevron-right {
+        display: none;
+    }
+    /********End of Testimonials Section********/
+
+    /****************Blog Section***************/
+    main .blog-list {
+        flex-wrap: wrap;
+    }
+
+    main .blog-list-child {
+        flex-grow: 1;
+    }
+
+    /************End of Blog Section************/
+
+    /*************Newsletter Section************/
+    main .newsletter-input input {
+        width: 220px;
+    }
+    /*********End of Newsletter Section*********/
+
+    /***************Footer Section**************/
+    footer form > input {
+        width: 90px;
+    }
+
+    footer .social-media {
+        width: 18%;
+    }
+    /***********End of Footer Section***********/
+}
+
+/* iPads, Tablets*/
+@media (max-width: 768px) {
+    /********************CSS Reset********************/
+    .container {
+        max-width: 95%;
+    }
+
+    /*****************Header Section*****************/
+    /*****************Nav Bar Section***************/
+    header nav ul.main-nav {
+        height: 620px;
+    }
+    /*************End of Nav Bar Section************/
+    /*************End of Header Section*************/
+
+    /******************Slogan Section***************/
+    header .slogan > h1 {
+        font-size: 35px;
+    }
+    
+    header .slogan > p {
+        font-size: 18px;
+    }
+    /*************End of Slogan Section*************/
+
+    /**************Featured Ads Section*************/
+    main .ad-list > div:nth-child(2) {
+        display: none;
+    }
+    /***********End of Featured Ads Section*********/
+
+    /***********Popular Categories Section**********/
+    main .categories-list-child {
+        width: 51%;
+    }
+
+    main .categories-list-child:not(:nth-child(4)) > .category-title {
+        padding-bottom: 0;
+    }
+    /*******End of Popular Categories Section********/
+
+    /***********Trending Today Section**********/
+    main .trending-list-child {
+        flex-direction: column;
+    }
+
+    main .trending-list-child a.real-estate,
+    main .trending-list-child a.furniture,
+    main .trending-list-child a.electronics,
+    main .trending-list-child a.cars {
+        width: 100%;
+    }
+    main .trending-detail {
+        width: 100%;
+    }
+
+    main .trending-today {
+        margin-bottom: 70px;
+    }
+    /*******End of Trending Today Section*******/
+
+    /****************Blog Section***************/
+    main .blog-list-child {
+        width: 50%;
+    }
+
+    main .blog-list-child > p {
+        padding-bottom: 20px;
+    }
+    /************End of Blog Section************/
+
+    /*************Newsletter Section************/
+    main .newsletter .container {
+        flex-direction: column;
+    }
+    
+    main .newsletter .newsletter-info {
+        width: 100%;
+        padding: 50px 0 10px 0;
+    }
+
+    main .newsletter form {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    
+    main .newsletter-input input {
+        width: 100%;
+    }
+    /*********End of Newsletter Section*********/
+
+    /***************Footer Section**************/
+
+    footer .footer-up,
+    footer .footer-up .footer-links {
+        flex-direction: column;
+    }
+
+    footer .footer-up {
+        padding: 80px 0;
+    }
+
+    footer .about,
+    footer .navigation,
+    footer .social-media {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    footer .social-media {
+        height: 75px;
+    }
+
+    footer form > input {
+        width: 100%;
+    }
+
+    /***********End of Footer Section***********/
 
 
 
 }
 
 
-
-/* Laptop */
 
