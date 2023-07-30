@@ -50,12 +50,23 @@
                     <i class='bx bx-menu'></i>
                 </label>
                 <input type="radio" name="burger" id="burger" class="burger" hidden>
+                <!-- End of Burger Menu -->
                 <ul class="main-nav d-flex">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Ads</a></li>
                     <li class="drop-down">
                         <a href="#">About</a>
-                        <ul class="secondary-nav">
+                        <label for="drop-down-toggle" class="toggle">
+                            <i class='bx bx-chevron-down'></i>
+                        </label>
+                        <input type="checkbox" name="" id="drop-down-toggle" hidden>
+                        <ul class="drop-down-content">
+                            <li><a href="#">The Company</a></li>
+                            <li><a href="#">The Leadership</a></li>
+                            <li><a href="#">Philosophy</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                        <ul class="drop-down-content-responsive">
                             <li><a href="#">The Company</a></li>
                             <li><a href="#">The Leadership</a></li>
                             <li><a href="#">Philosophy</a></li>
