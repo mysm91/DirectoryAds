@@ -26,7 +26,7 @@ My Google Scholar:
 
 https://scholar.google.com/citations?user=Dq20p4YAAAAJ&hl=en
 
-For any inquiries please contact me: at shahrashoub@outlook.com
+For any inquiries please contact me at: shahrashoub@outlook.com
 
 Special thanks to:
 
