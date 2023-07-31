@@ -223,16 +223,24 @@ header .search select:focus {
     outline: none;
 }
 
+header .search input[placeholder="What are you looking for?"],
 header .search input[placeholder="Location"],
 header .search select {
     color: var(--tertiary-color);
+}
+
+header .search input[placeholder="Location"],
+header .search select {
     flex-grow: 1;
 }
 
 header .search input[placeholder="What are you looking for?"] {
-    color: var(--tertiary-color);
     word-spacing: 2px;
     flex-grow: 2;
+}
+
+header .search select {
+    background-color: white;
 }
 
 header .search button {
@@ -266,7 +274,7 @@ form span::after {
 /*************Trending Search Section***********/
 header .trends {
     gap: 10px;
-    padding: 20px 15px 165px 0;
+    padding: 20px 15px 160px 0;
 }
 
 header .trends h3 {
@@ -543,7 +551,7 @@ main .trending-detail .wrapper div:first-child {
 
 main .trending-detail .wrapper div:first-child > div {
     padding: 8px 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--quadratic-color);
     border-radius: 20px;
     font-size: 12px;
     font-weight: 700;
@@ -1018,13 +1026,13 @@ footer .footer-down > p a:hover {
     header nav ul.main-nav {
         flex-direction: column;
         position: absolute;
+        height: calc(100vh);
         top: 0;
         left: 100%;
         padding-top: 70px;
         transition: 0.5s;
         background-color: white;
         z-index: 1;
-        height: 665px;
         width: 252px;
     }
 
@@ -1174,7 +1182,7 @@ footer .footer-down > p a:hover {
         -moz-appearance: none;
       }
 
-      form span::before {
+    form span::before {
         content: '\e5cf';
         font-family: 'Material Symbols Outlined';
         font-size: 20px;
@@ -1188,7 +1196,7 @@ footer .footer-down > p a:hover {
 
     /*************Trending Search Section***********/
     header .trends {
-        padding: 20px 15px 70px 0;
+        padding: 20px 15px 49px 0;
     }
     /*********End of Trending Search Section********/
     /*************End of Header Section*************/
@@ -1322,7 +1330,7 @@ footer .footer-down > p a:hover {
     /*****************Header Section*****************/
     /*****************Nav Bar Section***************/
     header nav ul.main-nav {
-        height: 620px;
+        height: calc(100vh);
     }
     /*************End of Nav Bar Section************/
     /*************End of Header Section*************/
@@ -1336,6 +1344,14 @@ footer .footer-down > p a:hover {
         font-size: 18px;
     }
     /*************End of Slogan Section*************/
+
+    /*************Trending Search Section***********/
+    header .trends {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px 90px 0;
+    }
+    /*********End of Trending Search Section********/
 
     /**************Featured Ads Section*************/
     main .ad-list > div:nth-child(2) {
@@ -1439,9 +1455,74 @@ footer .footer-down > p a:hover {
     }
 
     /***************Header Section******************/
+    /*****************Nav Bar Section***************/
+    header nav {
+        padding: 10px 0 20px 0;
+    }
+
+    header nav ul.main-nav {
+        padding-top: 20px;
+    }
+
+    header nav ul.main-nav > li > a {
+        padding: 16px 20px;
+    }
+
+    header nav i.bx-x {
+        top: 10px;
+    }
+    /*************End of Nav Bar Section************/
+
+    /******************Slogan Section***************/
+    header .slogan > h1 {
+        font-size: 40px;
+        margin-top: 0px;
+    }
+
+    header .slogan > p {
+        font-size: 16px;
+        margin: 10px 0 15px 0;
+    }
+    /*************End of Slogan Section*************/
+
+    /*****************Search Section****************/
+    header .search > form {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    header .search input,
+    header .search select,
+    header .search button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    form span::after {
+        content: '\e0c8';
+        font-family: 'Material Symbols Outlined';
+        font-size: 20px;
+        font-weight: 1000;
+        position: absolute;
+        top: -5px;
+        right: 10px;
+        color: black;
+    }
+
+    form span::before {
+        content: '\e5cf';
+        font-family: 'Material Symbols Outlined';
+        font-size: 20px;
+        font-weight: 1000;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        color: black;
+    }
+    /**************End of Search Section************/
     /*************Trending Search Section***********/
     header .trends {
-        padding: 20px 15px 90px 0;
+        padding: 10px 15px 90px 0;
         flex-wrap: wrap;
     }
     /*********End of Trending Search Section********/
@@ -1487,8 +1568,8 @@ footer .footer-down > p a:hover {
     main .blog .container > h2 {
         margin-top: 40px;
     }
-    /************End of Main Section************/
     /************End of Blog Section************/
+    /************End of Main Section************/
 
     /***************Footer Section**************/
     footer form > button {

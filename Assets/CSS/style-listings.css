@@ -69,6 +69,7 @@ a {
 header {
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./../Image/BG_1.jpg") fixed no-repeat center top / cover;
+    height: 500px;
 }
 
 /*****************Nav Bar Section***************/
@@ -95,7 +96,6 @@ header ul.main-nav > li > a {
 header nav > ul.main-nav > li:first-child > a {
     color: var(--primary-color);
     text-shadow: 0px 0px 1px var(--tertiary-color);
-
 }
 
 header ul.main-nav > li.drop-down > a {
@@ -186,138 +186,50 @@ header .slogan {
 }
 
 header .slogan > h1 {
-    font-size: 50px;
+    font-size: 47px;
     font-weight: 400;
     word-spacing: 8px;
     margin-top: 140px;
 }
 
 header .slogan > p {
-    font-size: 20px;
+    font-size: 18px;
     word-spacing: 5px;
     margin: 20px 0 40px 0;
 }
 /*************End of Slogan Section*************/
-
-/*****************Search Section****************/
-header .search > form {
-    width: 100%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 5px;
-    gap: 20px;
-}
-
-header .search input,
-header .search select,
-header .search button {
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 400;
-    border: transparent;
-}
-
-header .search input:focus,
-header .search select:focus {
-    outline: none;
-}
-
-header .search input[placeholder="Location"],
-header .search select {
-    color: var(--tertiary-color);
-    flex-grow: 1;
-}
-
-header .search input[placeholder="What are you looking for?"] {
-    color: var(--tertiary-color);
-    word-spacing: 2px;
-    flex-grow: 2;
-}
-
-header .search button {
-    background-color: var(--primary-color);
-    color: white;
-    flex-grow: 1;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-header .search button:hover {
-    background-color: #115ec2;
-}
-
-form span {
-    position: relative;
-}
-
-form span::after {
-    content: '\e0c8';
-    font-family: 'Material Symbols Outlined';
-    font-size: 20px;
-    font-weight: 1000;
-    position: absolute;
-    top: -5px;
-    right: 10px;
-    color: black;
-}
-/**************End of Search Section************/
-
-/*************Trending Search Section***********/
-header .trends {
-    gap: 10px;
-    padding: 20px 15px 165px 0;
-}
-
-header .trends h3 {
-    font-size: 15px;
-    font-weight: 400;
-}
-
-header .trends ul {
-    gap: 5px
-}
-
-header .trends ul a {
-    padding: 5px 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.3);
-    font-size: 13px;
-    transition: 0.5s;
-}
-
-header .trends ul a:hover {
-    background-color: white;
-    color: var(--primary-color);
-}
-/*********End of Trending Search Section********/
 /*************End of Header Section*************/
 
 /******************Main Section*****************/
-/**************Featured Ads Section*************/
-main .ads h3 {
-    margin-top: 70px;
-    margin-bottom: 25px;
-    font-size: 22px;
-    font-weight: 400;
+/************* Ads and Seacrh Section***********/
+/************** Ads Container Section***********/
+main .ads-and-search > .ads-background {
+    background-color: white;
 }
 
-main .ad-list {
+main .ads-and-search .ads-content {
+    padding-top: 70px;
+}
+
+main .ads-and-search .ads-list {
+    flex-wrap: wrap;
     gap: 30px;
+    padding-right: 60px;
 }
 
 main .ad-list-child {
     flex-grow: 1;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 8px 0 var(--secondary-color);
+    box-shadow: 0 0 4px 0 var(--secondary-color);
+    height: 320px;
+    width: 33%;
 }
 
-main .ad-list-child img {
+main .ad-list-child > a {
+    display: inline-block;
     width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 45%;
 }
 
 main .ad-detail div:first-child {
@@ -376,99 +288,146 @@ main .ad-detail .review span {
     font-size: 14px;
 }
 
-main .ads .left-right-icons {
-    margin-top: 50px;
-    margin-bottom: 80px;
-    font-size: 40px;
-    color: var(--tertiary-color);
-    gap: 20px;
+main .ads-page-number {
+    margin: 90px 0;
+    padding-right: 70px;
+    text-align: center;
 }
 
-main .ads .left-right-icons > i {
-    transition: 0.5s;
+main .ads-page-number > div {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 50%;
     cursor: pointer;
 }
 
-main .ads .left-right-icons > i:hover {
-    color: var(--primary-color);
-}
-/***********End of Featured Ads Section*********/
-
-/***********Popular Categories Section**********/
-main .popular-categories-background {
-    background-color: white;
-    width: 100%;
-    padding-bottom: 80px;
-}
-
-main .popular-categories .container {
-    flex-direction: column;
-    margin-bottom: 80px;
-}
-
-main .popular-categories-content h2 {
-    text-align: center;
-    color: var(--primary-color);
-    font-size: var(--h2-font-size);
-    letter-spacing: 1px;
-    margin-top: 80px;
-}
-
-main .popular-categories-content p {
-    text-align: center;
-    padding: 7px 15px;
-    color: var(--tertiary-color);
-    font-size: 15px;
-    margin: 10px 0;
-}
-
-main .popular-categories-content span {
-    border-bottom: 4px solid var(--primary-color);
-    width: 90px;
-    margin: 0px auto;
-    margin-bottom: 60px;
-}
-
-main .categories-list-child {
-    width: 20%;
-    flex-grow: 1;
-    padding: 10px 0;
-    background-color: transparent;
-    flex-direction: column;
-    border-radius: 20px;
-    scale: 1;
-    transition: 0.5s;
-}
-
-main .categories-list-child > i {
-    font-size: 55px;
-    color: var(--primary-color);
-}
-
-main .category-title,
-main .category-number {
-    color: var(--tertiary-color);
-}
-
-main .category-number {
+main .ads-page-number > div:first-child {
+    color: black;
     background-color: var(--quadratic-color);
-    border-radius: 20px;
+    cursor: auto;
 }
 
-main .categories-list-child:hover {
-    scale: 1.1;
-    background-color: var(--primary-color);
+main .ads-page-number > div:nth-child(4) {
+    color: black;
+    background-color: transparent;
+    cursor: auto;
+}
+/**********End of Ads Container Section*********/
+/************** Ads Seacrh Section**************/
+main .ads-search {
+    margin-left: 40px !important;
+    width: 60%;
+    color:var(--tertiary-color);
 }
 
-main .categories-list-child:hover > i,
-main .categories-list-child:hover > p {
-    color: white;
+main .ads-search .filters > h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.3rem;
 }
 
-main .categories-list-child:hover > .category-number {
-    background-color: #0f5bbe;
+main .ads-search .filters input,
+main .ads-search .filters select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid var(--secondary-color);
+    color: var(--tertiary-color);
+    background-color: white;
 }
-/*******End of Popular Categories Section********/
+
+main .ads-search .filters input:focus,
+main .ads-search .filters select:focus {
+    outline: none;
+}
+
+main .ads-search .filters select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+main .ads-search .filters input::placeholder {
+    color: var(--tertiary-color);
+}
+
+.input-icon {
+    position: relative;
+}
+
+main .ads-search .filters .input-icon > span::before {
+    content: '\e5cf';
+    font-family: 'Material Symbols Outlined';
+    font-size: 20px;
+    font-weight: 1000;
+    position: absolute;
+    top: -48px;
+    right: 10px;
+    color: var(--tertiary-color);
+}
+
+main .ads-search .filters .input-icon > span::after {
+    content: '\e0c8';
+    font-family: 'Material Symbols Outlined';
+    font-size: 20px;
+    font-weight: 1000;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: var(--tertiary-color);
+}
+
+main .ads-search .filters input[placeholder="What are you looking for?"] {
+    word-spacing: 2px;
+}
+
+main .radius-around > p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    margin-top: 2.6rem;
+    margin-bottom: 0.8rem;
+}
+
+main .radius-around > form > input {
+    width: 100%;
+}
+
+main .radius-around > form > output {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+}
+
+main .radius-around > form > output::after {
+    content: 'Km';
+    font-size: 1rem;
+}
+
+main .more-filters {
+    margin: 2.6rem 0;
+}
+
+main .more-filters > p,
+main .more-info > p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+main .more-filters li {
+    padding-bottom: 1rem;
+}
+/***********End of Ads Seacrh Section***********/
 
 /***********Trending Today Section**********/
 main .trending-today {
@@ -504,7 +463,7 @@ main .trending-list-right {
 main .trending-list-child {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 8px 0 var(--secondary-color);
+    box-shadow: 0 0 4px 0 var(--secondary-color);
 }
 
 main .trending-list-child a.real-estate,
@@ -517,19 +476,19 @@ main .trending-list-child a.cars {
     border-bottom-left-radius: 10px;
 }
 
-main .trending-list-child a.real-estate {
+main a.real-estate {
     background: url("./../Image/Ad_1.jpg") no-repeat center left / cover;
 }
 
-main .trending-list-child a.furniture {
+main a.furniture {
     background: url("./../Image/Ad_2.jpg") no-repeat center center / cover;
 }
 
-main .trending-list-child a.electronics {
+main a.electronics {
     background: url("./../Image/Ad_3.jpg") no-repeat center center / cover;
 }
 
-main .trending-list-child a.cars {
+main a.cars {
     background: url("./../Image/Ad_4.jpg") no-repeat center center / cover;
 }
 
@@ -543,7 +502,7 @@ main .trending-detail .wrapper div:first-child {
 
 main .trending-detail .wrapper div:first-child > div {
     padding: 8px 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--quadratic-color);
     border-radius: 20px;
     font-size: 12px;
     font-weight: 700;
@@ -1153,61 +1112,24 @@ footer .footer-down > p a:hover {
         transform: translate(-100%, 100%);
     }
     /*************End of Nav Bar Section************/
-
-    /******************Slogan Section***************/
-    header .slogan > h1 {
-        margin-top: -20px;
-    }
-    /*************End of Slogan Section*************/
-
-    /*****************Search Section****************/
-    header .search > form {
-        flex-direction: column;
-    }
-
-    header .search input[placeholder="Location"] {
-        width: 100%;
-    }
-
-    select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-      }
-
-      form span::before {
-        content: '\e5cf';
-        font-family: 'Material Symbols Outlined';
-        font-size: 20px;
-        font-weight: 1000;
-        position: absolute;
-        top: 66px;
-        right: 10px;
-        color: black;
-    }
-    /**************End of Search Section************/
-
-    /*************Trending Search Section***********/
-    header .trends {
-        padding: 20px 15px 70px 0;
-    }
-    /*********End of Trending Search Section********/
     /*************End of Header Section*************/
     
     /******************Main Section*****************/
-    /**************Featured Ads Section*************/
-    main .ad-list > div:nth-child(4) {
-        display: none;
+    /************* Ads and Seacrh Section***********/
+    main .ads-search {
+        margin-left: -100px !important;
     }
-    /***********End of Featured Ads Section*********/
+
+    main .ads-and-search .ads-list {
+        padding-right: 170px;
+    }
+
+    main .ads-page-number {
+        padding-right: 170px;
+    }
+    /******* End of Ads and Seacrh Section******/
     
-    /***********Popular Categories Section**********/
-    main .popular-categories-background {
-        padding-bottom: 10px;
-    }
-    /*******End of Popular Categories Section********/
-
     /************Testimonials Section***********/
-
     main .testimonials-content .container > p:nth-child(6) {
         width: 88%;
     }
@@ -1222,6 +1144,7 @@ footer .footer-down > p a:hover {
         width: 350px;
     }
     /*********End of Newsletter Section*********/
+    /************End of Main Section************/
 
     /***************Footer Section**************/
     footer form > input {
@@ -1240,27 +1163,48 @@ footer .footer-down > p a:hover {
 
 /* Laptops and Small screens*/
 @media (max-width: 1024px) {
+    /*******************CSS Reset*******************/
+    .wrapper {
+        max-width: 93%;
+        margin: 0 auto;
+    }
     /******************Main Section*****************/
-    /**************Featured Ads Section*************/
-    main .ad-list > div:nth-child(3) {
-        display: none;
-    }
-    /***********End of Featured Ads Section*********/
-    
-    /***********Popular Categories Section**********/
-    main .popular-categories-background {
-        padding-bottom: 10px;
+    /************* Ads and Seacrh Section***********/
+    /************** Ads Container Section***********/
+    main .ads-and-search .ads-list {
+        padding-right: 0px;
     }
 
-    main .categories-list {
-        flex-wrap: wrap;
+    main .ads-and-search .container {
+        flex-direction: column;        
     }
 
-    main .categories-list-child {
-        width: 30%;
-        flex-grow: 1;
+    main .ad-list-child {
+        width: 50%;
     }
-    /*******End of Popular Categories Section********/
+
+    main .ad-list-child > a {
+        display: inline-block;
+        width: 100%;
+        height: 50%;
+    }
+
+    main .ad-detail div:first-child {
+        margin: 5px 0;
+    }
+
+    main .ads-page-number {
+        padding-right: 0px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    main .ads-search {
+        margin-left: 0px !important;
+        width: 100%;
+    }
+    /***********End of Ads Seacrh Section***********/
+
 
     /***********Trending Today Section**********/
     main .trending-list {
@@ -1277,16 +1221,6 @@ footer .footer-down > p a:hover {
         display: none;
     }
     /********End of Testimonials Section********/
-
-    /****************Blog Section***************/
-    main .blog-list {
-        flex-wrap: wrap;
-    }
-
-    main .blog-list-child {
-        flex-grow: 1;
-    }
-    /************End of Blog Section************/
 
     /*************Newsletter Section************/
     main .newsletter-input input {
@@ -1305,18 +1239,11 @@ footer .footer-down > p a:hover {
     /***********End of Footer Section***********/
 }
 
-/* Media Query for tow line issue */
-@media (max-width: 1101px) {
-    main .categories-list-child:not(:nth-child(4)) > .category-title {
-        padding-bottom: 24px;
-    }
-}
-
 /* iPads, Tablets*/
 @media (max-width: 768px) {
     /********************CSS Reset********************/
     .container {
-        max-width: 95%;
+        max-width: 85%;
     }
 
     /*****************Header Section*****************/
@@ -1337,22 +1264,6 @@ footer .footer-down > p a:hover {
     }
     /*************End of Slogan Section*************/
 
-    /**************Featured Ads Section*************/
-    main .ad-list > div:nth-child(2) {
-        display: none;
-    }
-    /***********End of Featured Ads Section*********/
-
-    /***********Popular Categories Section**********/
-    main .categories-list-child {
-        width: 51%;
-    }
-
-    main .categories-list-child:not(:nth-child(4)) > .category-title {
-        padding-bottom: 0;
-    }
-    /*******End of Popular Categories Section********/
-
     /**************Trending Today Section************/
     main .trending-list-child {
         flex-direction: column;
@@ -1372,16 +1283,6 @@ footer .footer-down > p a:hover {
         margin-bottom: 70px;
     }
     /*******End of Trending Today Section*******/
-
-    /****************Blog Section***************/
-    main .blog-list-child {
-        width: 50%;
-    }
-
-    main .blog-list-child > p {
-        padding-bottom: 20px;
-    }
-    /************End of Blog Section************/
 
     /*************Newsletter Section************/
     main .newsletter .container {
@@ -1437,39 +1338,32 @@ footer .footer-down > p a:hover {
     .container {
         max-width: 90%;
     }
-
     /***************Header Section******************/
-    /*************Trending Search Section***********/
-    header .trends {
-        padding: 20px 15px 90px 0;
-        flex-wrap: wrap;
+    header {
+        height: 550px;
     }
-    /*********End of Trending Search Section********/
-    /*************End of Header Section*************/
+    /*****************Nav Bar Section***************/
+    header nav {
+        padding: 10px 0 20px 0;
+    }
 
+    header nav ul.main-nav {
+        padding-top: 20px;
+    }
+
+    header nav ul.main-nav > li > a {
+        padding: 16px 20px;
+    }
+
+    header nav i.bx-x {
+        top: 10px;
+    }
+    /*************End of Nav Bar Section************/
     /******************Main Section*****************/
-    /**************Featured Ads Section*************/
-    main .ads h3 {
-        margin-top: 40px;
-    }
-
-    main .ads .left-right-icons {
-        margin-top: 30px;
-        margin-bottom: 0;
-    }
-    /**********End of Featured Ads Section********/
-
-    /***********Popular Categories Section********/
-    main .popular-categories-content h2 {
-        margin-top: 30px;
-        font-size: var(--h2-font-size-mobile);
-    }
-    /*****End of Popular Categories Section******/
-
     /***********Trending Today Section***********/
     main .trending-today {
         margin-top: 40px;
-        margin-bottom: 60pxpx;
+        margin-bottom: 60px;
     }
     /*******End of Trending Today Section*******/
 
@@ -1481,14 +1375,13 @@ footer .footer-down > p a:hover {
     main .testimonials-background {
         padding-bottom: 40px;
     }
-    /********End of Testimonials Section********/
 
-    /****************Blog Section***************/
-    main .blog .container > h2 {
-        margin-top: 40px;
+    main .testimonials-content .container > p:nth-child(6) {
+        color: var(--tertiary-color);
+        font-size: 20px;
     }
+    /********End of Testimonials Section********/
     /************End of Main Section************/
-    /************End of Blog Section************/
 
     /***************Footer Section**************/
     footer form > button {
