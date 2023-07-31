@@ -1,8 +1,8 @@
-![html5-logo-31819](https://github.com/mysm91/DirectoryAds/assets/120313407/080e7c93-e04d-4d3a-99cc-a9c9229150c6)# DirectoryAds
 
 A project for Kaaryar Institute's Front End Introductory Course
 
 This project is entirely developed using HTML5 and CSS. The tags are arranged on the pages by Flex.
+
 ![html5-logo-31819](https://github.com/mysm91/DirectoryAds/assets/120313407/a7e50f6b-3438-4464-929d-27c7e7bdb73c)
 
 
