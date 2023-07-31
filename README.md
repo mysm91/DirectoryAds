@@ -1,4 +1,4 @@
-
+# DirectoryAds
 A project for Kaaryar Institute's Front End Introductory Course
 
 This project is entirely developed using HTML5 and CSS. The tags are arranged on the pages by Flex.
@@ -14,26 +14,28 @@ The address of the page from which the design was inspired:
 
 https://preview.colorlib.com/theme/directoryads/
 
+
 Author:
 
 Meysam Shahrashoub
 
 My LinkedIn:
-
 https://www.linkedin.com/in/shahrashoub
 
 My Google Scholar:
-
 https://scholar.google.com/citations?user=Dq20p4YAAAAJ&hl=en
 
 For any inquiries please contact me at: shahrashoub@outlook.com
+
 
 Special thanks to:
 
 Abolfazl Farokhru
 
-Kaaryar Instution
+Kaaryar Institute
 
-Digikala
+DIGIKALA
+
+
 
 July 2023
