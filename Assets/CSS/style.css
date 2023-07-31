@@ -16,6 +16,7 @@
     --sixth-color: #737373;
     --seventh-color: #f7f7f7;
     --h2-font-size: 35px;
+    --h2-font-size-mobile: 30px;
 }
 
 ::selection {
@@ -26,7 +27,6 @@
 body {
     font-family: 'Nanum Gothic', sans-serif;
     background-color: #f8f9fa;
-    /* width: 100vw; */
 }
 
 ul,
@@ -218,7 +218,6 @@ header .search button {
     font-weight: 400;
     border: transparent;
 }
-
 
 header .search input:focus,
 header .search select:focus {
@@ -993,7 +992,6 @@ footer .footer-down > p a:hover {
     /*****************Header Section*****************/
     /*****************Nav Bar Section***************/
     header nav input.burger:checked + ul {
-        /* display: flex !important; */
         transform: translate(-100%, 0);
     }
 
@@ -1082,12 +1080,7 @@ footer .footer-down > p a:hover {
     }
 
     header li.drop-down > label > i.bx-chevron-down {
-        display: inline;
-        font-size: 15px;
         color: var(--tertiary-color);
-    }
-
-    header li.drop-down > label > i.bx-chevron-down {
         font-size: 18px;
         position: absolute;
         right: 20px;
@@ -1113,35 +1106,17 @@ footer .footer-down > p a:hover {
         color: var(--tertiary-color);
     }
 
-    li.drop-down {
-        /* position: relative; */
-    }
-
     ul.drop-down-content {
-        /* position: absolute;
-        left: 0; */
         padding: 0;
     }
 
     header ul.drop-down-content {
-        display: block;
-        width: 70%;
-        height: auto;
-        overflow: hidden;
-        /* visibility: hidden; */
-        /* opacity: 0; */
-        transform: translate(0%, 100%);
-        transition: 0.5s;
         display: none;
-    }
-
-    header ul.drop-down-content {
         background-color: white;
         color: black;
         border-top: 3px solid var(--primary-color);
         margin-top: 15px;
         position: absolute;
-        /* display: none; */
         visibility: hidden;
         opacity: 0;
         transform: translate(0, 15%);
@@ -1151,9 +1126,7 @@ footer .footer-down > p a:hover {
     header ul.drop-down-content-responsive {
         visibility: visible;
         opacity: 1;
-        position: static;
         display: none;
-        transform: translateY(100px);
         padding: 0 30px;
     }
     
@@ -1165,14 +1138,11 @@ footer .footer-down > p a:hover {
     }
 
     .drop-down > input:checked ~ ul.drop-down-content-responsive {
-        /* background-color: red; */
         display: block;
-        transform: translateY(0px);
     }
 
     .drop-down > input:checked ~ label {
         transform: rotate(0deg);
-
     }
     
     header ul.drop-down-content > li,
@@ -1181,8 +1151,6 @@ footer .footer-down > p a:hover {
     }
 
     li.drop-down:hover > ul.drop-down-content {
-        /* visibility: visible; */
-        /* opacity: 1; */
         transform: translate(-100%, 100%);
     }
     /*************End of Nav Bar Section************/
@@ -1234,10 +1202,6 @@ footer .footer-down > p a:hover {
     /***********End of Featured Ads Section*********/
     
     /***********Popular Categories Section**********/
-    main .categories-list-child:not(:nth-child(4)) > .category-title {
-        padding-bottom: 24px;
-    }
-
     main .popular-categories-background {
         padding-bottom: 10px;
     }
@@ -1344,6 +1308,13 @@ footer .footer-down > p a:hover {
     /***********End of Footer Section***********/
 }
 
+/* Media Query for tow line issue */
+@media (max-width: 1101px) {
+    main .categories-list-child:not(:nth-child(4)) > .category-title {
+        padding-bottom: 24px;
+    }
+}
+
 /* iPads, Tablets*/
 @media (max-width: 768px) {
     /********************CSS Reset********************/
@@ -1385,7 +1356,7 @@ footer .footer-down > p a:hover {
     }
     /*******End of Popular Categories Section********/
 
-    /***********Trending Today Section**********/
+    /**************Trending Today Section************/
     main .trending-list-child {
         flex-direction: column;
     }
@@ -1434,9 +1405,9 @@ footer .footer-down > p a:hover {
         width: 100%;
     }
     /*********End of Newsletter Section*********/
+    /************End of Main Section************/
 
     /***************Footer Section**************/
-
     footer .footer-up,
     footer .footer-up .footer-links {
         flex-direction: column;
@@ -1460,9 +1431,73 @@ footer .footer-down > p a:hover {
     footer form > input {
         width: 100%;
     }
+    /*************End of Footer Section*************/
+}
 
+/* Mobile*/
+@media (min-width: 320px) and (max-width: 480px) {
+    /********************CSS Reset********************/
+    .container {
+        max-width: 90%;
+    }
+
+    /***************Header Section******************/
+    /*************Trending Search Section***********/
+    header .trends {
+        padding: 20px 15px 90px 0;
+        flex-wrap: wrap;
+    }
+    /*********End of Trending Search Section********/
+    /*************End of Header Section*************/
+
+    /******************Main Section*****************/
+    /**************Featured Ads Section*************/
+    main .ads h3 {
+        margin-top: 40px;
+    }
+
+    main .ads .left-right-icons {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    /**********End of Featured Ads Section********/
+
+    /***********Popular Categories Section********/
+    main .popular-categories-content h2 {
+        margin-top: 30px;
+        font-size: var(--h2-font-size-mobile);
+    }
+    /*****End of Popular Categories Section******/
+
+    /***********Trending Today Section***********/
+    main .trending-today {
+        margin-top: 40px;
+        margin-bottom: 60pxpx;
+    }
+    /*******End of Trending Today Section*******/
+
+    /************Testimonials Section***********/
+    main .testimonials h2 {
+        padding-top: 30px;
+    }
+
+    main .testimonials-background {
+        padding-bottom: 40px;
+    }
+    /********End of Testimonials Section********/
+
+    /****************Blog Section***************/
+    main .blog .container > h2 {
+        margin-top: 40px;
+    }
+    /************End of Main Section************/
+    /************End of Blog Section************/
+
+    /***************Footer Section**************/
+    footer form > button {
+        padding: 0px 10px;
+    }
     /***********End of Footer Section***********/
-
 
 
 }
