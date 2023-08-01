@@ -93,9 +93,10 @@ header ul.main-nav > li > a {
     transition: 0.5s;
 }
 
-header nav > ul.main-nav > li:first-child > a {
+header nav > ul.main-nav > li:nth-child(2) > a {
     color: var(--primary-color);
     text-shadow: 0px 0px 1px var(--tertiary-color);
+
 }
 
 header ul.main-nav > li.drop-down > a {
@@ -895,7 +896,7 @@ footer form > button {
     height: 40px;
     padding: 0 20px;
     background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 18px;
     color: white;
