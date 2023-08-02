@@ -944,7 +944,7 @@ footer form > button {
     height: 40px;
     padding: 0 20px;
     background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 18px;
     color: white;
@@ -1246,6 +1246,14 @@ footer .footer-down > p a:hover {
     /***********End of Footer Section***********/
 }
 
+
+/* Media Query for tow line issue */
+@media (max-width: 1101px) {
+    main .categories-list-child:not(:nth-child(4)) > .category-title {
+        padding-bottom: 24px;
+    }
+}
+
 /* Laptops and Small screens*/
 @media (max-width: 1024px) {
     /******************Main Section*****************/
@@ -1267,6 +1275,10 @@ footer .footer-down > p a:hover {
     main .categories-list-child {
         width: 30%;
         flex-grow: 1;
+    }
+
+    main .categories-list-child:not(:nth-child(4)) > .category-title {
+        padding-bottom: 0px;
     }
     /*******End of Popular Categories Section********/
 
@@ -1311,13 +1323,6 @@ footer .footer-down > p a:hover {
         width: 18%;
     }
     /***********End of Footer Section***********/
-}
-
-/* Media Query for tow line issue */
-@media (max-width: 1101px) {
-    main .categories-list-child:not(:nth-child(4)) > .category-title {
-        padding-bottom: 24px;
-    }
 }
 
 /* iPads, Tablets*/
